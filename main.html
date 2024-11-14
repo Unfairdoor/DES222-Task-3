@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Mars Rover Tracker - Explore the Red Planet</title>
+        <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+
+    </head>
+    <body>
+        <script src="main.js"></script>
+        <!--Main Content Section-->
+        <div class="desktop-one">
+            <div>
+                <!-- Navigation Header Selection-->
+                <header class="flex-col-center-center header">
+                    <div class="header__column">
+                        <div class="header__row--top">
+                            <p class="header__title ui text size-textxs">DES 222 Task 2</p>
+                            <p class="header__title ui text size-texts">MARS ROVER TRACKER</p>
+                            <p class="header__author ui text size-textxs">Gareth Cheetham</p>
+                        </div>
+                        <ul class="header__rowNavigation">
+                            <li>
+                                <button class="camera-button" data-camera="FHAZ">
+                                    <p class="header__menu-item ui text size-textmd">FHAZ</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="camera-button" data-camera="RHAZ">
+                                    <p class="header__menu-item ui text size-textmd">RHAZ</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="camera-button" data-camera="MAST">
+                                    <p class="header__menu-item ui text size-textmd">MAST</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="camera-button" data-camera="CHEMCAM">
+                                    <p class="header__menu-item ui text size-textmd">CHEMCAM</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="camera-button" data-camera="MAHLI">
+                                    <p class="header__menu-item ui text size-textmd">MAHLI</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="camera-button" data-camera="MARDI">
+                                    <p class="header__menu-item ui text size-textmd">MARDI</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="camera-button" data-camera="NAVCAM">
+                                    <p class="header__menu-item ui text size-textmd">NAVCAM</p>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+
+                <!--Image Gallery Section-->
+                <div class="row">
+                    <div class="opentab">
+                        <div class="opentab__row">
+                            <div class="opentab__column">
+                                <img
+                                    src="img/Mast Camera Highlight.png"
+                                    alt="Mast Camera Image"
+                                    class="opentab__hightlightImage"
+                                />
+                                <p class="opentab__title ui text size-textmd">Mast Camera</p>
+                                <p class="opentab__description ui text size-textxs">
+                                    Camera Description: Lorem ipsum dolor sit ame, consectetur adipiscin elit.
+                                </p>
+                            </div>
+                            <div class="opentab__picture">
+                                <img
+                                    alt="MastCam Picture"
+                                    class="opentab__cameraPicture"
+                                    id = "opentab-image"
+                                />
+                                <p class="opentab__date ui text size-texts">Date:11/11/2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Rover Selection Section-->
+            <div class="row_one">
+                <div class="rowcuriosity">
+                    
+                    <button class="rowcuriosity__button--curiosity ui button amber_a700 size-sm fill round" 
+                    onclick="switchRover('Curiosity')">Curiosity</button>
+
+                    <button class="rowcuriosity__button--perseverance ui button yellow_900 size-xs fill round"
+                    onclick="switchRover('Perseverance')">Perseverance</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

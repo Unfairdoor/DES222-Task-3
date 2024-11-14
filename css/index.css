@@ -1,0 +1,227 @@
+/* 
+Variables
+*/
+
+:root{
+    /* Colour Variables */
+    --amber_a700: #fda600;
+    --blue_gray_100: #d9d9d9;
+    --gray_200:#f0e7e7;
+    --brown_900:#451804;
+    --yellow_900: #e88d11;
+
+    /* Shadow Variables */
+
+    --shadow-xs: 0 4px 4px 0 #0000003f;
+    --shadow-sm: 2px -8px 20px 1px #0000003f;
+}
+
+.flex-col-center-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+Common CSS
+*/
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header__title{
+    color: white !important;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header__menu-item {
+    padding: 10px 20px; /* Adjust padding to space out tabs */
+    background-color: var(--blue_gray_100);
+    border-bottom: none; /* Avoid border on bottom to connect it with the box */
+    border-radius: 8px 8px 0 0; /* Rounded top corners for tab effect */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Page CSS */
+
+.desktop-one{
+    gap: 24px;
+    background-color: black;
+    box-shadow: var(--shadow-xs);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+/* Header Styling */
+.header {
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: var(--brown_900);
+    border-top: 34px solid black;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;  /* Align children vertically */
+}
+
+.header__column{
+    margin-right: auto;
+    gap: 14px;
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    max-width: 1410px;
+    width: 100%;
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+.header__row--top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header__author{
+    color: white !important;
+    align-self: flex-start;
+}
+
+/* Tab and button layout adjustment */
+.header__row--navigation {
+    margin-left: 8px !important;
+    margin-bottom: -20px;
+    list-style-type: none;
+    gap: 1rem;
+    display: flex;
+
+}
+
+.row {
+    margin-top: 0; /* Remove any top margin */
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    display: flex;
+}
+
+/* Adjust tab container (opentab) */
+.opentab{
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: var(--blue_gray_100);
+    width: 100%;
+    display: flex;
+    max-width: 1400px;
+    margin-top: 0; /* Remove top margin */
+    margin-left: auto;
+    margin-right: auto;
+    border-top: none;
+    border: 1px solid black;
+}
+
+.opentab__row{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.opentab__column{
+    margin-bottom: 18px;
+    align-self: flex-end;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.opentab__hightlightImage{
+    height: 286px;
+    width: 90%;
+    object-fit: contain;
+}
+
+.opentab__title{
+    margin-top: 100px;
+    margin-left: 96px;
+}
+
+.opentab__description{
+    margin-top: 10px;
+    margin-left: 42px;
+    width: 56%;
+    line-height: 21px;
+}
+
+.opentab__picture{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.opentab__cameraPicture{
+    height: 704px !important; 
+    width: 94%;
+    object-fit: contain;
+}
+
+.opentab__date{
+    margin-top: -2px;
+    position: relative;
+}
+
+.row_one{
+    padding-left: 56px;
+    padding-right: 56px;
+    display: flex;
+    justify-content: center;
+}
+
+.rowcuriosity{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    gap: 20px;
+    background-color: var(--gray_200);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    max-width: 1086px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.rowcuriosity__button--curiosity{
+    color: black !important;
+    margin-top: 24px;
+    padding-left: 33px;
+    padding-right: 33px;
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+    background-color: var(--amber_a700);
+    height: 100px
+}
+
+.rowcuriosity__button--perseverance{
+    color: black !important;
+    padding-left: 33px;
+    padding-right: 33px;
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+    background-color: var(--yellow_900);
+    box-shadow: 2px -8px 20px 1px black !important;
+    height: 72px;
+}
