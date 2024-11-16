@@ -9,6 +9,8 @@ Variables
     --gray_200:#f0e7e7;
     --brown_900:#451804;
     --yellow_900: #e88d11;
+    --button_hover: #a5a5a5;
+    --button_neutral:#727272;
 
     /* Shadow Variables */
 
@@ -38,13 +40,33 @@ html,body{
     font-family: 'Courier New', Courier, monospace;
 }
 
-.header__menu-item {
-    padding: 10px 20px; /* Adjust padding to space out tabs */
-    background-color: var(--blue_gray_100);
-    border-bottom: none; /* Avoid border on bottom to connect it with the box */
-    border-radius: 8px 8px 0 0; /* Rounded top corners for tab effect */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+
+
+.camera-button {
+    margin-right: 10px;
+    margin-bottom: -25px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 20px; /* Add padding to the button */
+    background-color: var(--button_neutral); /* Button color */
+    color: black; /* Text color */
+    border: none; /* Remove default border */
+    border-top-left-radius: 10px; /* Curved top left corner */
+    border-top-right-radius: 10px; /* Curved top right corner */
+    border-bottom-left-radius: 0; /* Sharp bottom left corner */
+    border-bottom-right-radius: 0; /* Sharp bottom right corner */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color change on hover */
 }
+
+.camera-button:hover{
+    background-color: var(--button_hover);
+}
+
+.camera-button:focus{
+    background-color: var(--blue_gray_100);
+}
+
 
 /* Page CSS */
 
@@ -69,6 +91,7 @@ html,body{
     display: flex;
     flex-direction: column;  /* Align children vertically */
 }
+
 
 .header__column{
     margin-right: auto;
@@ -126,7 +149,7 @@ html,body{
     margin-left: auto;
     margin-right: auto;
     border-top: none;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .opentab__row{
@@ -145,22 +168,27 @@ html,body{
     align-items: start;
 }
 
-.opentab__hightlightImage{
-    height: 286px;
+.opentab__highlightImage{
+    height: 286px !important;
     width: 90%;
     object-fit: contain;
+    margin-left: 5%;
+    border: 1px solid black;
 }
 
-.opentab__title{
-    margin-top: 100px;
-    margin-left: 96px;
+.opentab__title {
+    font-size: 1.5em;
+    margin-top: 0; /* No space on top */
+    margin-left: 1em;
 }
+
+
 
 .opentab__description{
-    margin-top: 10px;
-    margin-left: 42px;
-    width: 56%;
-    line-height: 21px;
+    /* margin-top: 10px; */
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    font-size: 1em;
 }
 
 .opentab__picture{
@@ -204,24 +232,72 @@ html,body{
     margin-right: auto
 }
 
-.rowcuriosity__button--curiosity{
+.rowcuriosity__button--curiosity, .rowcuriosity__button--perseverance {
     color: black !important;
-    margin-top: 24px;
-    padding-left: 33px;
-    padding-right: 33px;
-    border-top-left-radius: 8px !important;
-    border-top-right-radius: 8px !important;
-    background-color: var(--amber_a700);
-    height: 100px
-}
-
-.rowcuriosity__button--perseverance{
-    color: black !important;
+    width: 50%;
     padding-left: 33px;
     padding-right: 33px;
     border-top-left-radius: 8px !important;
     border-top-right-radius: 8px !important;
     background-color: var(--yellow_900);
-    box-shadow: 2px -8px 20px 1px black !important;
-    height: 72px;
+    height: 72px; /* Smaller height by default */
+    cursor: pointer; /* Change cursor to pointer for interactivity */
+    font-size: 2em; /* Adjust text size */
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.3s ease; /* Smooth transition for background, size, etc. */
 }
+
+.rowcuriosity__button--curiosity:focus,
+.rowcuriosity__button--curiosity:active {
+    background-color: var(--amber_a700); /* Maintain Curiosity color when focused */
+    height: 100px; /* Keep the height consistent */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Focus effect */
+}
+
+.rowcuriosity__button--perseverance:focus,
+.rowcuriosity__button--perseverance:active {
+    background-color: var(--amber_a700); /* Maintain Curiosity color when focused */
+    height: 100px; /* Keep the height consistent */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Focus effect */
+}
+
+/* Add a hover effect */
+.rowcuriosity__button--curiosity:hover,
+.rowcuriosity__button--perseverance:hover {
+    opacity: 0.8; /* Slight opacity change on hover */
+}
+
+/* Optional: Adjust for the layout of buttons */
+.rowcuriosity__button--curiosity,
+.rowcuriosity__button--perseverance {
+    margin: 0 10px; /* Ensure consistent margin between buttons */
+}
+
+.rover-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .left-section {
+    width: 45%;
+  }
+  
+  .right-section {
+    width: 45%;
+    text-align: center;
+  }
+  
+  .opentab__title {
+    font-size: 2rem;
+  }
+  
+  .opentab__description {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .opentab__cameraPicture {
+    max-width: 100%;
+    max-height: 100%;
+  }

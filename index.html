@@ -15,7 +15,7 @@
                 <header class="flex-col-center-center header">
                     <div class="header__column">
                         <div class="header__row--top">
-                            <p class="header__title ui text size-textxs">DES 222 Task 2</p>
+                            <p class="header__title ui text size-textxs">DES 222 Task 3</p>
                             <p class="header__title ui text size-texts">MARS ROVER TRACKER</p>
                             <p class="header__author ui text size-textxs">Gareth Cheetham</p>
                         </div>
@@ -67,7 +67,7 @@
                                 <img
                                     src="img/Mast Camera Highlight.png"
                                     alt="Mast Camera Image"
-                                    class="opentab__hightlightImage"
+                                    class="opentab__highlightImage"
                                 />
                                 <p class="opentab__title ui text size-textmd">Mast Camera</p>
                                 <p class="opentab__description ui text size-textxs">
@@ -91,13 +91,19 @@
             <div class="row_one">
                 <div class="rowcuriosity">
                     
-                    <button class="rowcuriosity__button--curiosity ui button amber_a700 size-sm fill round" 
+                    <button class="rowcuriosity__button--curiosity ui button amber_a700 size-sm fill round" id = "curiosityButton"
                     onclick="switchRover('Curiosity')">Curiosity</button>
 
-                    <button class="rowcuriosity__button--perseverance ui button yellow_900 size-xs fill round"
+                    <button class="rowcuriosity__button--perseverance ui button yellow_900 size-xs fill round" id = "perseveranceButton"
                     onclick="switchRover('Perseverance')">Perseverance</button>
                 </div>
             </div>
+            <div class="rover-content">
+                <div class="left-section">
+                  <h1 class="opentab__title"></h1>
+                  <p class="opentab__description"></p>
+                </div>
+              </div>
         </div>
     </body>
 </html>
